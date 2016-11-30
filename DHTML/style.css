@@ -1,0 +1,42 @@
+body
+{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+h1
+{
+	color: #039
+}
+
+table
+{
+	background-color: aqua;
+	border-style: solid;
+	border-width: thin;
+	border-color: black
+}
+
+a.noDecor
+{
+	text-decoration: none;
+	color: black
+}
+
+/*Style of the Table When Hidden*/
+table.noShow
+{
+	visibility:hidden;
+	position:absolute;
+}
+
+/*The Style of the Top Table*/
+#main
+{
+	width: 75%;
+}
+
+#main.tr
+{
+	align: left;
+}
