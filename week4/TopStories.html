@@ -10,16 +10,27 @@
     </script>
 
     <script type="text/javascript">
-    //         "http://my.abcnews.go.com/rsspublic/fp_rss20.xml"
-    //         "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/front_page/rss.xml"
-    //          "http://www.cbsnews.com/feeds/rss/main.rss"
-    //          "http://rss.cnn.com/rss/cnn_topstories.rss"
-    //          "http://rss.msnbc.msn.com/id/3032091/device/rss/rss.xml"
-    //          "http://rss.news.yahoo.com/rss/topstories"
+
+    function PopulateValues()
+    {
+        var ar = new Array();
+        ar[ 0 ] = "http://my.abcnews.go.com/rsspublic/fp_rss20.xml";
+        ar[ 1 ] = "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/front_page/rss.xml";
+        ar[ 2 ] = "http://www.cbsnews.com/feeds/rss/main.rss";
+        ar[ 3 ] = "http://rss.cnn.com/rss/cnn_topstories.rss";
+        ar[ 4 ] = "http://rss.msnbc.msn.com/id/3032091/device/rss/rss.xml";
+        ar[ 5 ] = "http://rss.news.yahoo.com/rss/topstories";
+
+        for( var i = 0; i < 6; i++ )
+        {
+            document.forms[ 0 ].agency[ i ].value = ar[ i ];
+        }
+    }
+
     </script>
 
 </head>
-<body onload="newsUpdate()">
+<body onload="PopulateValues()" onload="newsUpdate()">
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
             <td height="45" align="left" valign="top" style="background-image: url('images/top_bg1.gif')">
