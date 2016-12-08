@@ -1,7 +1,13 @@
 /* <![CDATA[ */
 var newsRequest = false;
+var g_number_entries = 6;
+
 var headlines = new Array();
 var headlinesString = "";
+
+var recentNews;
+
+// This is the part that is in charge of initializing the AJAX API (Application Programming Interface)
 function getRequestObject() {
     try {
         httpRequest = new XMLHttpRequest();
@@ -22,9 +28,15 @@ function getRequestObject() {
     }
     return httpRequest;
 }
-var recentNews;
-function newsUpdate() {
+
+
+
+
+function newsUpdate()
+{
     if (!newsRequest)
+
+        // This is where we initialize AJAX
         newsRequest = getRequestObject();
     for (var i = 0; i < 6; ++i) {
         if (document.forms[0].agency[i].checked == true) {
@@ -39,7 +51,10 @@ function newsUpdate() {
     clearTimeout(recentNews);
     recentNews = setTimeout('newsUpdate()', 300000);
 }
-function fillNewsInfo() {
+
+
+function fillNewsInfo()
+{
     if (newsRequest.readyState == 4 && newsRequest.status == 200) {
         var news = newsRequest.responseXML;
         document.getElementById("newsCell").innerHTML = ""

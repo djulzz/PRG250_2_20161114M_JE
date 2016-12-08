@@ -7,6 +7,7 @@
     <link href="text.css" rel="stylesheet" type="text/css" />
 
     <script src="TopStories.js" type="text/javascript">
+
     </script>
 
     <script type="text/javascript">
@@ -21,7 +22,7 @@
         ar[ 4 ] = "http://rss.msnbc.msn.com/id/3032091/device/rss/rss.xml";
         ar[ 5 ] = "http://rss.news.yahoo.com/rss/topstories";
 
-        for( var i = 0; i < 6; i++ )
+        for( var i = 0; i < g_number_entries; i++ )
         {
             document.forms[ 0 ].agency[ i ].value = ar[ i ];
         }
